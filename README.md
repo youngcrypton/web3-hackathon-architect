@@ -41,7 +41,7 @@ Given a project idea, Project Architect walks you through an interactive discove
 The easiest way to install, works with all [agentskills.io-compatible agents](https://agentskills.io):
 
 ```bash
-npx skills add USERNAME/project-architect
+npx skills add ersinkoc/project-architect
 ```
 
 This auto-detects your coding agent and installs to the correct location.
@@ -49,18 +49,18 @@ This auto-detects your coding agent and installs to the correct location.
 **Install for a specific agent:**
 
 ```bash
-npx skills add USERNAME/project-architect --agent claude-code
-npx skills add USERNAME/project-architect --agent cursor
-npx skills add USERNAME/project-architect --agent codex
+npx skills add ersinkoc/project-architect --agent claude-code
+npx skills add ersinkoc/project-architect --agent cursor
+npx skills add ersinkoc/project-architect --agent codex
 ```
 
 **Install globally (all projects):**
 
 ```bash
-npx skills add USERNAME/project-architect --global
+npx skills add ersinkoc/project-architect --global
 ```
 
-> Replace `USERNAME` with the GitHub username/org where this repo is hosted.
+> Repository: [github.com/ersinkoc/project-architect](https://github.com/ersinkoc/project-architect)
 
 ### Claude Code (plugin mode)
 
@@ -92,7 +92,7 @@ Clone the repo and copy/symlink the skill directory into your agent's skills fol
 
 ```bash
 # Example: install for Claude Code globally
-git clone https://github.com/USERNAME/project-architect.git
+git clone https://github.com/ersinkoc/project-architect.git
 ln -s $(pwd)/project-architect ~/.claude/skills/project-architect
 
 # Example: install for Cursor in a project

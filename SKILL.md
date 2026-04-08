@@ -16,7 +16,7 @@ compatibility: >
   Optimized for Claude Code, also compatible with Cursor, Gemini CLI, Codex, and other
   agentskills.io-compatible agents.
 metadata:
-  author: ersin
+  author: ersinkoc
   version: "1.0.0"
   category: development
 ---
