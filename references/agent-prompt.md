@@ -1,11 +1,13 @@
-# Claude Code Prompt Guide
+# Agent Prompt Guide
 
-How to write PROMPT.md — a **single-shot prompt** that Claude Code can execute to build the
-entire project from scratch. This is the most important output of the Project Architect skill.
+How to write PROMPT.md — a **single-shot prompt** that any coding agent (WrongStack, Claude
+Code, Cursor, and others) can execute to build the entire project from scratch. This is the
+most important output of the Project Architect skill. Because the prompt is fully
+self-contained, it is portable across agents — write it once, run it anywhere.
 
-## What Makes a Great Claude Code Prompt
+## What Makes a Great Agent Prompt
 
-A great prompt eliminates all ambiguity. Claude Code should never have to guess, infer,
+A great prompt eliminates all ambiguity. The agent should never have to guess, infer,
 or make creative decisions. Every file, every dependency, every pattern, every edge case
 is spelled out. The prompt IS the source of truth.
 
@@ -28,12 +30,12 @@ is spelled out. The prompt IS the source of truth.
 ## Prompt Structure
 
 ```markdown
-# [Project Name] — Claude Code Implementation Prompt
+# [Project Name] — Implementation Prompt
 
 ## Project Overview
 
 [3-5 sentences from SPECIFICATION.md §1.1. Elevator pitch + key differentiators.
-Just enough context for Claude Code to understand what it's building.]
+Just enough context for the agent to understand what it's building.]
 
 ## Tech Stack
 
@@ -188,7 +190,7 @@ After implementation, verify:
 ## Prompt Optimization Rules
 
 ### 1. Inline Everything Needed
-Don't reference other documents. If Claude Code needs to know the database schema, put the
+Don't reference other documents. If the agent needs to know the database schema, put the
 schema in the prompt. If it needs to know the auth flow, describe the auth flow.
 
 ### 2. Code Sketches for Complex Patterns

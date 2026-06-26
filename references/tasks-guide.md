@@ -1,11 +1,11 @@
 # Tasks Guide
 
-How to write TASKS.md — ordered, actionable work items that a developer or **Claude Code**
-can execute sequentially to build the entire project.
+How to write TASKS.md — ordered, actionable work items that a developer or a **coding agent**
+(WrongStack, Claude Code, Cursor, …) can execute sequentially to build the entire project.
 
 ## Principles
 
-1. **Each task is a Claude Code session.** A task should be completable in a single focused
+1. **Each task is one agent session.** A task should be completable in a single focused
    session. Self-contained context, clear deliverables, verifiable outcome.
 2. **Dependency order is the build order.** No task references work from a later task.
 3. **2-8 hours per task.** Smaller → merge. Larger → split.
@@ -258,17 +258,17 @@ Each task needs 3-6 criteria. Each must be:
 
 ---
 
-## Claude Code Optimization
+## Coding Agent Optimization
 
-Tasks should be written so Claude Code can execute them efficiently:
+Tasks should be written so any coding agent (WrongStack, Claude Code, …) can execute them efficiently:
 
-1. **List every file** to create or modify — Claude Code works best with explicit targets
+1. **List every file** to create or modify — agents work best with explicit targets
 2. **Include the pattern** to follow — reference IMPLEMENTATION.md section for the code pattern
-3. **State the test command** — Claude Code should run tests after implementation
-4. **Reference dependencies** — Claude Code needs to know what's already built
+3. **State the test command** — the agent should run tests after implementation
+4. **Reference dependencies** — the agent needs to know what's already built
 5. **Keep context self-contained** — don't say "as discussed above", repeat key context
 
-### Example: Claude Code-Optimized Task
+### Example: Agent-Optimized Task
 
 ```markdown
 ### Task 7: User Registration Endpoint

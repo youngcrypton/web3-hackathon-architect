@@ -2,7 +2,42 @@
 
 An [Agent Skill](https://agentskills.io) for **documentation-first project planning**. Transforms a project idea into implementation-ready blueprints and a single-shot coding agent prompt.
 
-Compatible with **40+ coding agents** including Claude Code, Cursor, Gemini CLI, GitHub Copilot, Codex, Roo Code, and more.
+Compatible with **40+ coding agents** including WrongStack, Claude Code, Cursor, Gemini CLI, GitHub Copilot, Codex, and more.
+
+---
+
+## ⚡ Sponsored by WrongStack
+
+<div align="center">
+
+### _Built on the wrong stack. Shipped anyway._
+
+**[WrongStack](https://wrongstack.com)** is a terminal-native AI coding agent that reads your code, edits files, runs commands, and reasons through bugs — across a plain REPL, a full-screen TUI, and a browser UI. You keep your hand on every permission.
+
+[![Website](https://img.shields.io/badge/%F0%9F%8C%90_Website-wrongstack.com-6E56CF?style=for-the-badge)](https://wrongstack.com)
+&nbsp;
+[![GitHub](https://img.shields.io/badge/GitHub-wrongstack%2Fwrongstack-181717?style=for-the-badge&logo=github)](https://github.com/wrongstack/wrongstack)
+
+</div>
+
+| | What you get |
+|---|---|
+| 🧠 **~110 LLM providers** | Anthropic, OpenAI, Google, and any OpenAI-compatible endpoint |
+| 🛠️ **36 built-in tools** | Read, edit, search, test, and run shell — every call gated by per-tool permissions |
+| 🖥️ **3 surfaces** | Plain readline REPL · Ink/React TUI (`--tui`) · standalone web UI |
+| 🤖 **Fleet orchestration** | A **Director** coordinates subagents; `eternal` & `parallel` autonomous loops |
+| 📋 **Spec-Driven Development** | Hand it a `PROMPT.md` and let it build the whole project, single-shot |
+| 🔐 **Secure by default** | AES-256-GCM secret storage, per-tool policies, opt-in YOLO mode |
+
+> **🧩 The perfect pairing:** Plan with **Project Architect**, then hand the generated `PROMPT.md` to **WrongStack** for spec-driven, single-shot execution. Architect the *what* and the *how* — WrongStack ships it.
+
+<div align="center">
+
+🔗 **[wrongstack.com](https://wrongstack.com)** &nbsp;·&nbsp; **[github.com/wrongstack/wrongstack](https://github.com/wrongstack/wrongstack)**
+
+</div>
+
+---
 
 ## What It Does
 
@@ -49,6 +84,7 @@ This auto-detects your coding agent and installs to the correct location.
 **Install for a specific agent:**
 
 ```bash
+npx skills add ersinkoc/project-architect --agent wrongstack
 npx skills add ersinkoc/project-architect --agent claude-code
 npx skills add ersinkoc/project-architect --agent cursor
 npx skills add ersinkoc/project-architect --agent codex
@@ -82,6 +118,7 @@ Clone the repo and copy/symlink the skill directory into your agent's skills fol
 
 | Agent | Skills Directory |
 |-------|-----------------|
+| WrongStack | `.wrongstack/skills/` or `~/.wrongstack/skills/` |
 | Claude Code | `.claude/skills/` or `~/.claude/skills/` |
 | Cursor | `.cursor/skills/` or `~/.cursor/skills/` |
 | GitHub Copilot | `.github/skills/` |
@@ -91,8 +128,11 @@ Clone the repo and copy/symlink the skill directory into your agent's skills fol
 | Generic | `.agents/skills/` or `~/.agents/skills/` |
 
 ```bash
-# Example: install for Claude Code globally
+# Example: install for WrongStack globally
 git clone https://github.com/ersinkoc/project-architect.git
+ln -s $(pwd)/project-architect ~/.wrongstack/skills/project-architect
+
+# Example: install for Claude Code globally
 ln -s $(pwd)/project-architect ~/.claude/skills/project-architect
 
 # Example: install for Cursor in a project
@@ -154,7 +194,7 @@ The skill includes detailed guides that inform each generation phase:
 | `references/implementation-guide.md` | Template and rules for IMPLEMENTATION.md |
 | `references/tasks-guide.md` | Template and rules for TASKS.md |
 | `references/branding-guide.md` | Template and rules for BRANDING.md |
-| `references/claude-code-prompt.md` | Template and rules for PROMPT.md |
+| `references/agent-prompt.md` | Template and rules for PROMPT.md |
 
 ## Project Structure
 
@@ -172,19 +212,19 @@ project-architect/
     ├── implementation-guide.md          # Implementation template
     ├── tasks-guide.md                   # Tasks template
     ├── branding-guide.md                # Branding template
-    └── claude-code-prompt.md            # Prompt template
+    └── agent-prompt.md                  # Prompt template
 ```
 
 ## Compatibility
 
 This skill follows the [Agent Skills specification](https://agentskills.io/specification) and is compatible with:
 
+- **WrongStack** (terminal-native AI coding agent — [wrongstack.com](https://wrongstack.com))
 - **Claude Code** (plugin + skill)
 - **Cursor**
 - **GitHub Copilot**
 - **OpenAI Codex**
 - **Gemini CLI**
-- **Roo Code**
 - **OpenCode**
 - **Kiro**
 - **And 30+ more agents** via [agentskills.io](https://agentskills.io)
